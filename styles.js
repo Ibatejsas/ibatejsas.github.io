@@ -486,8 +486,8 @@ module.exports = content.locals || {};
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\DIM\Desktop\build\gestion-parking\frontsigepark\node_modules\bootstrap\dist\css\bootstrap.min.css */"./node_modules/bootstrap/dist/css/bootstrap.min.css");
-module.exports = __webpack_require__(/*! C:\Users\DIM\Desktop\build\gestion-parking\frontsigepark\src\styles.css */"./src/styles.css");
+__webpack_require__(/*! C:\Users\DIM\Desktop\Nueva carpeta (14)\gestion-parking\frontsigepark\node_modules\bootstrap\dist\css\bootstrap.min.css */"./node_modules/bootstrap/dist/css/bootstrap.min.css");
+module.exports = __webpack_require__(/*! C:\Users\DIM\Desktop\Nueva carpeta (14)\gestion-parking\frontsigepark\src\styles.css */"./src/styles.css");
 
 
 /***/ })
