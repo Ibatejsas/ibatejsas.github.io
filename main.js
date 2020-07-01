@@ -44,20 +44,20 @@ __webpack_require__.r(__webpack_exports__);
 const routes = [
     {
         path: '',
-        component: _comun_home_home_component__WEBPACK_IMPORTED_MODULE_2__["HomeComponent"]
+        component: _comun_home_home_component__WEBPACK_IMPORTED_MODULE_2__["HomeComponent"],
     },
     {
         path: 'home',
-        component: _comun_home_home_component__WEBPACK_IMPORTED_MODULE_2__["HomeComponent"]
+        component: _comun_home_home_component__WEBPACK_IMPORTED_MODULE_2__["HomeComponent"],
     },
     {
         path: 'administracion',
-        loadChildren: () => Promise.all(/*! import() | administracion-administracion-module */[__webpack_require__.e("common"), __webpack_require__.e("administracion-administracion-module")]).then(__webpack_require__.bind(null, /*! ./administracion/administracion.module */ "./src/app/administracion/administracion.module.ts")).then(m => m.AdministracionModule)
+        loadChildren: () => Promise.all(/*! import() | administracion-administracion-module */[__webpack_require__.e("common"), __webpack_require__.e("administracion-administracion-module")]).then(__webpack_require__.bind(null, /*! ./administracion/administracion.module */ "./src/app/administracion/administracion.module.ts")).then((m) => m.AdministracionModule),
     },
     {
         path: 'operacion',
-        loadChildren: () => Promise.all(/*! import() | operacion-operacion-module */[__webpack_require__.e("common"), __webpack_require__.e("operacion-operacion-module")]).then(__webpack_require__.bind(null, /*! ./operacion/operacion.module */ "./src/app/operacion/operacion.module.ts")).then(m => m.OperacionModule)
-    }
+        loadChildren: () => Promise.all(/*! import() | operacion-operacion-module */[__webpack_require__.e("common"), __webpack_require__.e("operacion-operacion-module")]).then(__webpack_require__.bind(null, /*! ./operacion/operacion.module */ "./src/app/operacion/operacion.module.ts")).then((m) => m.OperacionModule),
+    },
 ];
 class AppRoutingModule {
 }
@@ -68,7 +68,7 @@ AppRoutingModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineI
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
         args: [{
                 imports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forRoot(routes)],
-                exports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]]
+                exports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]],
             }]
     }], null, null); })();
 
@@ -130,12 +130,20 @@ AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCompo
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppModule", function() { return AppModule; });
-/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/__ivy_ngcc__/fesm2015/platform-browser.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+/* harmony import */ var _servicios_servicios_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./servicios/servicios.module */ "./src/app/servicios/servicios.module.ts");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/__ivy_ngcc__/fesm2015/platform-browser.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 /* harmony import */ var _comun_comun_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./comun/comun.module */ "./src/app/comun/comun.module.ts");
+/* harmony import */ var _servicios_plaza_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./servicios/plaza.service */ "./src/app/servicios/plaza.service.ts");
+/* harmony import */ var _servicios_plaza_api_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./servicios/plaza-api.service */ "./src/app/servicios/plaza-api.service.ts");
+/* harmony import */ var _servicios_ticket_api_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./servicios/ticket-api.service */ "./src/app/servicios/ticket-api.service.ts");
+/* harmony import */ var _servicios_ticket_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./servicios/ticket.service */ "./src/app/servicios/ticket.service.ts");
+
+
+
+
 
 
 
@@ -145,31 +153,30 @@ __webpack_require__.r(__webpack_exports__);
 
 class AppModule {
 }
-AppModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule"]({ type: AppModule, bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]] });
-AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({ factory: function AppModule_Factory(t) { return new (t || AppModule)(); }, providers: [], imports: [[
-            _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
-            _app_routing_module__WEBPACK_IMPORTED_MODULE_2__["AppRoutingModule"],
-            _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"],
-            _comun_comun_module__WEBPACK_IMPORTED_MODULE_5__["ComunModule"],
-        ]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
-        _app_routing_module__WEBPACK_IMPORTED_MODULE_2__["AppRoutingModule"],
-        _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"],
-        _comun_comun_module__WEBPACK_IMPORTED_MODULE_5__["ComunModule"]] }); })();
-/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](AppModule, [{
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"],
+AppModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineNgModule"]({ type: AppModule, bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]] });
+AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjector"]({ factory: function AppModule_Factory(t) { return new (t || AppModule)(); }, providers: [
+        {
+            provide: _servicios_plaza_service__WEBPACK_IMPORTED_MODULE_6__["PlazaService"], useClass: _servicios_plaza_api_service__WEBPACK_IMPORTED_MODULE_7__["PlazaApiService"]
+        },
+        {
+            provide: _servicios_ticket_service__WEBPACK_IMPORTED_MODULE_9__["TicketService"], useClass: _servicios_ticket_api_service__WEBPACK_IMPORTED_MODULE_8__["TicketApiService"]
+        }
+    ], imports: [[_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"], _comun_comun_module__WEBPACK_IMPORTED_MODULE_5__["ComunModule"], _servicios_servicios_module__WEBPACK_IMPORTED_MODULE_0__["ServiciosModule"]]] });
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"], _comun_comun_module__WEBPACK_IMPORTED_MODULE_5__["ComunModule"], _servicios_servicios_module__WEBPACK_IMPORTED_MODULE_0__["ServiciosModule"]] }); })();
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵsetClassMetadata"](AppModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"],
         args: [{
-                declarations: [
-                    _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"],
+                declarations: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]],
+                imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"], _comun_comun_module__WEBPACK_IMPORTED_MODULE_5__["ComunModule"], _servicios_servicios_module__WEBPACK_IMPORTED_MODULE_0__["ServiciosModule"]],
+                providers: [
+                    {
+                        provide: _servicios_plaza_service__WEBPACK_IMPORTED_MODULE_6__["PlazaService"], useClass: _servicios_plaza_api_service__WEBPACK_IMPORTED_MODULE_7__["PlazaApiService"]
+                    },
+                    {
+                        provide: _servicios_ticket_service__WEBPACK_IMPORTED_MODULE_9__["TicketService"], useClass: _servicios_ticket_api_service__WEBPACK_IMPORTED_MODULE_8__["TicketApiService"]
+                    }
                 ],
-                imports: [
-                    _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
-                    _app_routing_module__WEBPACK_IMPORTED_MODULE_2__["AppRoutingModule"],
-                    _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"],
-                    _comun_comun_module__WEBPACK_IMPORTED_MODULE_5__["ComunModule"],
-                ],
-                providers: [],
-                bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]]
+                bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]],
             }]
     }], null, null); })();
 
@@ -357,7 +364,7 @@ SideBarComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineC
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6, "Operaci\u00F3n");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    } }, directives: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterLinkWithHref"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterLinkActive"]], styles: [".sidenav[_ngcontent-%COMP%] {\r\n    margin: 0;\r\n    padding: 0;\r\n    width: 200px;\r\n    background-color: #1c013d;\r\n    position: absolute;\r\n    height: 100%;\r\n    overflow: auto;\r\n  }\r\n  \r\n  .sidenav[_ngcontent-%COMP%]   a[_ngcontent-%COMP%] {\r\n    display: block;\r\n    color: rgb(252, 250, 155);\r\n    padding: 16px;\r\n    text-decoration: none;\r\n  }\r\n  \r\n  .sidenav[_ngcontent-%COMP%]   a.active[_ngcontent-%COMP%] {\r\n    background-color: #ffe600;\r\n    color: #1c013d;\r\n    font-weight: bold;\r\n  }\r\n  \r\n  .sidenav[_ngcontent-%COMP%]   a[_ngcontent-%COMP%]:hover:not(.active) {\r\n    background-color: #ffe600;\r\n    color: #1c013d;\r\n    font-weight: bold;\r\n  }\r\n  \r\n  \r\n  \r\n  @media screen and (max-width: 1024px) {\r\n    .sidenav[_ngcontent-%COMP%] {\r\n      width: 100%;\r\n      height: auto;\r\n      position: relative;\r\n    }\r\n    .sidenav[_ngcontent-%COMP%]   a[_ngcontent-%COMP%] {\r\n      float: left;\r\n      width: -webkit-fit-content;\r\n      width: -moz-fit-content;\r\n      width: fit-content;\r\n    }\r\n\r\n  }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tdW4vc2lkZS1iYXIvc2lkZS1iYXIuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLFNBQVM7SUFDVCxVQUFVO0lBQ1YsWUFBWTtJQUNaLHlCQUF5QjtJQUN6QixrQkFBa0I7SUFDbEIsWUFBWTtJQUNaLGNBQWM7RUFDaEI7O0VBRUE7SUFDRSxjQUFjO0lBQ2QseUJBQXlCO0lBQ3pCLGFBQWE7SUFDYixxQkFBcUI7RUFDdkI7O0VBRUE7SUFDRSx5QkFBeUI7SUFDekIsY0FBYztJQUNkLGlCQUFpQjtFQUNuQjs7RUFFQTtJQUNFLHlCQUF5QjtJQUN6QixjQUFjO0lBQ2QsaUJBQWlCO0VBQ25COztFQUVBLDREQUE0RDs7RUFDNUQ7SUFDRTtNQUNFLFdBQVc7TUFDWCxZQUFZO01BQ1osa0JBQWtCO0lBQ3BCO0lBQ0E7TUFDRSxXQUFXO01BQ1gsMEJBQWtCO01BQWxCLHVCQUFrQjtNQUFsQixrQkFBa0I7SUFDcEI7O0VBRUYiLCJmaWxlIjoic3JjL2FwcC9jb211bi9zaWRlLWJhci9zaWRlLWJhci5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnNpZGVuYXYge1xyXG4gICAgbWFyZ2luOiAwO1xyXG4gICAgcGFkZGluZzogMDtcclxuICAgIHdpZHRoOiAyMDBweDtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICMxYzAxM2Q7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICBoZWlnaHQ6IDEwMCU7XHJcbiAgICBvdmVyZmxvdzogYXV0bztcclxuICB9XHJcbiAgXHJcbiAgLnNpZGVuYXYgYSB7XHJcbiAgICBkaXNwbGF5OiBibG9jaztcclxuICAgIGNvbG9yOiByZ2IoMjUyLCAyNTAsIDE1NSk7XHJcbiAgICBwYWRkaW5nOiAxNnB4O1xyXG4gICAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xyXG4gIH1cclxuICBcclxuICAuc2lkZW5hdiBhLmFjdGl2ZSB7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZlNjAwO1xyXG4gICAgY29sb3I6ICMxYzAxM2Q7XHJcbiAgICBmb250LXdlaWdodDogYm9sZDtcclxuICB9XHJcbiAgXHJcbiAgLnNpZGVuYXYgYTpob3Zlcjpub3QoLmFjdGl2ZSkge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZTYwMDtcclxuICAgIGNvbG9yOiAjMWMwMTNkO1xyXG4gICAgZm9udC13ZWlnaHQ6IGJvbGQ7XHJcbiAgfVxyXG4gICAgXHJcbiAgLyogQ2FtYmlhciBhIGJhcnJhIHN1cGVyaW9yIGFsIHJlZHVjaXIgcG9yIGRlYmFqbyBkZSAxMDI0cHgqL1xyXG4gIEBtZWRpYSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDEwMjRweCkge1xyXG4gICAgLnNpZGVuYXYge1xyXG4gICAgICB3aWR0aDogMTAwJTtcclxuICAgICAgaGVpZ2h0OiBhdXRvO1xyXG4gICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbiAgICB9XHJcbiAgICAuc2lkZW5hdiBhIHtcclxuICAgICAgZmxvYXQ6IGxlZnQ7XHJcbiAgICAgIHdpZHRoOiBmaXQtY29udGVudDtcclxuICAgIH1cclxuXHJcbiAgfSJdfQ== */"] });
+    } }, directives: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterLinkWithHref"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterLinkActive"]], styles: [".sidenav[_ngcontent-%COMP%] {\r\n    margin: 0;\r\n    padding: 0;\r\n    width: 200px;\r\n    background-color: #1c013d;\r\n    position: absolute;\r\n    height: 100%;\r\n    overflow: auto;\r\n  }\r\n  \r\n  .sidenav[_ngcontent-%COMP%]   a[_ngcontent-%COMP%] {\r\n    display: block;\r\n    color: rgb(252, 250, 155);\r\n    padding: 16px;\r\n    text-decoration: none;\r\n    display: block;\r\n  }\r\n  \r\n  .sidenav[_ngcontent-%COMP%]   a.active[_ngcontent-%COMP%] {\r\n    background-color: #ffe600;\r\n    color: #1c013d;\r\n    font-weight: bold;\r\n  }\r\n  \r\n  .sidenav[_ngcontent-%COMP%]   a[_ngcontent-%COMP%]:hover:not(.active) {\r\n    background-color: #ffe600;\r\n    color: #1c013d;\r\n    font-weight: bold;\r\n  }\r\n  \r\n  \r\n  \r\n  @media screen and (max-width: 1024px) {\r\n    .sidenav[_ngcontent-%COMP%] {\r\n      width: 100%;\r\n      height: auto;\r\n      position: relative;\r\n    }\r\n    .sidenav[_ngcontent-%COMP%]   a[_ngcontent-%COMP%] {\r\n      float: left;\r\n      width: -webkit-fit-content;\r\n      width: -moz-fit-content;\r\n      width: fit-content;\r\n    }\r\n\r\n  }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tdW4vc2lkZS1iYXIvc2lkZS1iYXIuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUVBO0lBQ0ksU0FBUztJQUNULFVBQVU7SUFDVixZQUFZO0lBQ1oseUJBQXlCO0lBQ3pCLGtCQUFrQjtJQUNsQixZQUFZO0lBQ1osY0FBYztFQUNoQjs7RUFFQTtJQUNFLGNBQWM7SUFDZCx5QkFBeUI7SUFDekIsYUFBYTtJQUNiLHFCQUFxQjtJQUNyQixjQUFjO0VBQ2hCOztFQUVBO0lBQ0UseUJBQXlCO0lBQ3pCLGNBQWM7SUFDZCxpQkFBaUI7RUFDbkI7O0VBRUE7SUFDRSx5QkFBeUI7SUFDekIsY0FBYztJQUNkLGlCQUFpQjtFQUNuQjs7RUFFQSw0REFBNEQ7O0VBQzVEO0lBQ0U7TUFDRSxXQUFXO01BQ1gsWUFBWTtNQUNaLGtCQUFrQjtJQUNwQjtJQUNBO01BQ0UsV0FBVztNQUNYLDBCQUFrQjtNQUFsQix1QkFBa0I7TUFBbEIsa0JBQWtCO0lBQ3BCOztFQUVGIiwiZmlsZSI6InNyYy9hcHAvY29tdW4vc2lkZS1iYXIvc2lkZS1iYXIuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIlxyXG5cclxuLnNpZGVuYXYge1xyXG4gICAgbWFyZ2luOiAwO1xyXG4gICAgcGFkZGluZzogMDtcclxuICAgIHdpZHRoOiAyMDBweDtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICMxYzAxM2Q7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICBoZWlnaHQ6IDEwMCU7XHJcbiAgICBvdmVyZmxvdzogYXV0bztcclxuICB9XHJcbiAgXHJcbiAgLnNpZGVuYXYgYSB7XHJcbiAgICBkaXNwbGF5OiBibG9jaztcclxuICAgIGNvbG9yOiByZ2IoMjUyLCAyNTAsIDE1NSk7XHJcbiAgICBwYWRkaW5nOiAxNnB4O1xyXG4gICAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xyXG4gICAgZGlzcGxheTogYmxvY2s7XHJcbiAgfVxyXG4gIFxyXG4gIC5zaWRlbmF2IGEuYWN0aXZlIHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmU2MDA7XHJcbiAgICBjb2xvcjogIzFjMDEzZDtcclxuICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG4gIH1cclxuICBcclxuICAuc2lkZW5hdiBhOmhvdmVyOm5vdCguYWN0aXZlKSB7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZlNjAwO1xyXG4gICAgY29sb3I6ICMxYzAxM2Q7XHJcbiAgICBmb250LXdlaWdodDogYm9sZDtcclxuICB9XHJcbiAgICBcclxuICAvKiBDYW1iaWFyIGEgYmFycmEgc3VwZXJpb3IgYWwgcmVkdWNpciBwb3IgZGViYWpvIGRlIDEwMjRweCovXHJcbiAgQG1lZGlhIHNjcmVlbiBhbmQgKG1heC13aWR0aDogMTAyNHB4KSB7XHJcbiAgICAuc2lkZW5hdiB7XHJcbiAgICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgICBoZWlnaHQ6IGF1dG87XHJcbiAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICAgIH1cclxuICAgIC5zaWRlbmF2IGEge1xyXG4gICAgICBmbG9hdDogbGVmdDtcclxuICAgICAgd2lkdGg6IGZpdC1jb250ZW50O1xyXG4gICAgfVxyXG5cclxuICB9Il19 */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](SideBarComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
@@ -451,6 +458,203 @@ AppInfoService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineIn
 
 /***/ }),
 
+/***/ "./src/app/servicios/plaza-api.service.ts":
+/*!************************************************!*\
+  !*** ./src/app/servicios/plaza-api.service.ts ***!
+  \************************************************/
+/*! exports provided: PlazaApiService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PlazaApiService", function() { return PlazaApiService; });
+/* harmony import */ var _plaza_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./plaza.service */ "./src/app/servicios/plaza.service.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+
+
+
+
+
+//const urlBasePlazas = 'http://localhost:8080/api/plazas';
+const urlBasePlazas = 'https://sigepark.herokuapp.com/api/plazas';
+class PlazaApiService extends _plaza_service__WEBPACK_IMPORTED_MODULE_0__["PlazaService"] {
+    constructor(http) {
+        super();
+        this.http = http;
+    }
+    //Sacamos el numero total de plazas
+    getPlazasTotales() {
+        return this.http
+            .get(urlBasePlazas)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])((respuesta) => respuesta['page'] ? respuesta['page'].totalElements : 0));
+    }
+    //Obtenemos las plazas ocupadas
+    getPlazasOcupadas() {
+        return this.http.get(urlBasePlazas + '/search/total-ocupado?ocupado=true');
+    }
+    insertarPlazas(plaza) {
+        return this.http.post(urlBasePlazas, plaza);
+    }
+    quitarPlazas() {
+        return this.http.delete(`${urlBasePlazas}`);
+    }
+}
+PlazaApiService.ɵfac = function PlazaApiService_Factory(t) { return new (t || PlazaApiService)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"])); };
+PlazaApiService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({ token: PlazaApiService, factory: PlazaApiService.ɵfac, providedIn: 'root' });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](PlazaApiService, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"],
+        args: [{
+                providedIn: 'root',
+            }]
+    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] }]; }, null); })();
+
+
+/***/ }),
+
+/***/ "./src/app/servicios/plaza.service.ts":
+/*!********************************************!*\
+  !*** ./src/app/servicios/plaza.service.ts ***!
+  \********************************************/
+/*! exports provided: PlazaService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PlazaService", function() { return PlazaService; });
+class PlazaService {
+}
+
+
+/***/ }),
+
+/***/ "./src/app/servicios/servicios.module.ts":
+/*!***********************************************!*\
+  !*** ./src/app/servicios/servicios.module.ts ***!
+  \***********************************************/
+/*! exports provided: ServiciosModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ServiciosModule", function() { return ServiciosModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+
+
+
+
+class ServiciosModule {
+}
+ServiciosModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({ type: ServiciosModule });
+ServiciosModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({ factory: function ServiciosModule_Factory(t) { return new (t || ServiciosModule)(); }, imports: [[
+            _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
+            _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"]
+        ]] });
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](ServiciosModule, { imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
+        _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"]] }); })();
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](ServiciosModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
+        args: [{
+                declarations: [],
+                imports: [
+                    _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
+                    _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"]
+                ]
+            }]
+    }], null, null); })();
+
+
+/***/ }),
+
+/***/ "./src/app/servicios/ticket-api.service.ts":
+/*!*************************************************!*\
+  !*** ./src/app/servicios/ticket-api.service.ts ***!
+  \*************************************************/
+/*! exports provided: TicketApiService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TicketApiService", function() { return TicketApiService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+/* harmony import */ var _ticket_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ticket.service */ "./src/app/servicios/ticket.service.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+
+
+
+
+
+//const urlBaseTickets = 'http://localhost:8080/api/tickets';
+const urlBaseTickets = 'https://sigepark.herokuapp.com/api/tickets';
+class TicketApiService extends _ticket_service__WEBPACK_IMPORTED_MODULE_2__["TicketService"] {
+    constructor(http) {
+        super();
+        this.http = http;
+    }
+    getTarifa(url) {
+        return this.http.get(url);
+    }
+    getPlaza(url) {
+        return this.http.get(url);
+    }
+    getTickets() {
+        return this.http
+            .get(urlBaseTickets)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["map"])((respuesta) => respuesta['_embedded'] ? respuesta['_embedded'].tickets : []));
+    }
+    getTicketNoPagados() {
+        return this.http
+            .get(urlBaseTickets + '/search/por-pagado?pagado=false')
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["map"])((respuesta) => respuesta['_embedded'] ? respuesta['_embedded'].tickets : []));
+    }
+    // TicketWrapper es una interfaz en la que defino los campos que quiero obtener
+    crearTicket(matricula) {
+        return this.http.post(urlBaseTickets, { matricula });
+    }
+    pagarTicket(id) {
+        return this.http.patch(`${urlBaseTickets}/${id}`, null).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["catchError"])((error) => {
+            if (error.status === 404) {
+                alert('Mensaje desde el Observable: Ticket no encontrado');
+            }
+            else {
+                alert('Mensaje desde el Observable: Error inesperado: ' + error.message);
+            }
+            return [];
+        }));
+    }
+}
+TicketApiService.ɵfac = function TicketApiService_Factory(t) { return new (t || TicketApiService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"])); };
+TicketApiService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: TicketApiService, factory: TicketApiService.ɵfac, providedIn: 'root' });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](TicketApiService, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
+        args: [{
+                providedIn: 'root',
+            }]
+    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] }]; }, null); })();
+
+
+/***/ }),
+
+/***/ "./src/app/servicios/ticket.service.ts":
+/*!*********************************************!*\
+  !*** ./src/app/servicios/ticket.service.ts ***!
+  \*********************************************/
+/*! exports provided: TicketService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TicketService", function() { return TicketService; });
+class TicketService {
+}
+
+
+/***/ }),
+
 /***/ "./src/environments/environment.ts":
 /*!*****************************************!*\
   !*** ./src/environments/environment.ts ***!
@@ -512,7 +716,7 @@ _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["platformBrowser"]().boot
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\DIM\Desktop\jos1706\sigeparkFront\sigeparkFront\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\DIM\Desktop\build\gestion-parking\frontsigepark\src\main.ts */"./src/main.ts");
 
 
 /***/ })
